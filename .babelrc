@@ -1,0 +1,47 @@
+{
+	"presets": [
+		"@babel/react",
+		"@babel/env"
+	],
+	"plugins": [
+		["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
+		["@babel/plugin-proposal-class-properties", { "loose": true }],
+		["@babel/transform-runtime", {
+			"react-intl": {
+				"messagesDir": "./build/messages",
+				"enforceDescriptions": false
+			}
+		}
+		]
+	],
+	"env": {
+		"cjs": {
+			"presets": [["@babel/env"]]
+		},
+		"es": {
+			"presets": [
+				["@babel/env", { "modules": false  }]
+			]
+		},
+		"watch": {
+			"presets": [
+				["@babel/env", {
+					"targets": {
+						"chrome": 59
+					},
+					"modules": false
+				}]
+			]
+		},
+		"server": {
+			"presets": [
+				["@babel/env", {
+					"targets": {
+						"node": 7.5
+					},
+					"loose": true
+				}]
+			]
+		}
+	}
+}

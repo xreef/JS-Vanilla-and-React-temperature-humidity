@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+/dist/
+/node_modules/
+/.idea/
+/npm-debug.log
+/package-lock.json
+package-lock.json
+/.idea/vcs.xml

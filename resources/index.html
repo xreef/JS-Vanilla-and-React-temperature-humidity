@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>react-stockcharts</title>
+<!--<script type="text/javascript" src="../../node_modules/react/umd/react.development.js"></script>-->
+<!--<script type="text/javascript" src="../../node_modules/react-dom/umd/react-dom.development.js"></script>-->
+
+<script type="text/javascript" src="iot-widget.min.js"></script>
+</head>
+<body style="">
+    <div id="container2"></div>
+    <br/><br/><br/>
+    <div id="container"></div>
+	<script type="application/javascript">
+        var container = document.getElementById('container');
+        var hw = new Widget.Humidity(container, 40, 200, 50);
+        hw.draw();
+
+        var container2 = document.getElementById('container2');
+        var tw = new Widget.Termometer(container2, 15, 250);
+        tw.draw();
+	</script>
+    <button onclick="hw.setHumidity(80);">Set humidity to 80</button>
+    <button onclick="hw.setHumidity(40);">Set humidity to 40</button>
+    <button onclick="tw.setTemperature(30);">Set temperature to 30</button>
+    <button onclick="tw.setTemperature(-5);">Set temperature to -5</button>
+</body>
+</html>
