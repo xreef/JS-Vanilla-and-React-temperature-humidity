@@ -1,4 +1,4 @@
-# Simple animated temperature and humidity
+# Simple animated temperature and humidity gauge
 
 These widgets are used to create this demo application
 
